@@ -1,0 +1,1199 @@
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+[Rank 0 | Local Rank 0] 2026-03-24 15:13:48,810 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[Rank 0 | Local Rank 0] 2026-03-24 15:13:49,724 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[Rank 0 | Local Rank 0] 2026-03-24 15:13:50,564 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/ray/_private/node.py:1125: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_gcs_server(
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/ray/_private/node.py:1086: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  self._webui_url, process_info = ray._private.services.start_api_server(
+2026-03-24 15:13:59,323	WARNING utils.py:460 -- Detecting docker specified CPUs. In previous versions of Ray, CPU detection in containers was incorrect. Please ensure that Ray has enough CPUs allocated. As a temporary workaround to revert to the prior behavior, set `RAY_USE_MULTIPROCESSING_CPU_COUNT=1` as an env var before starting Ray. Set the env var: `RAY_DISABLE_DOCKER_CPU_WARNING=1` to mute this warning.
+2026-03-24 15:14:00,688	INFO worker.py:2003 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+/home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4065519)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4065519)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4065519)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4065519)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: 
+[36m(pid=4065519)[0m     *************************************************************************************************************
+[36m(pid=4065519)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+[36m(pid=4065519)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+[36m(pid=4065519)[0m     The backend in torch.distributed.init_process_group set to hccl now..
+[36m(pid=4065519)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+[36m(pid=4065519)[0m     The device parameters have been replaced with npu in the function below:
+[36m(pid=4065519)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+[36m(pid=4065519)[0m     *************************************************************************************************************
+[36m(pid=4065519)[0m     
+[36m(pid=4065519)[0m   warnings.warn(msg, ImportWarning)
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+[36m(pid=4065519)[0m   warnings.warn(msg, RuntimeWarning)
+[36m(pid=4065519)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(pid=4065519)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(pid=4065519)[0m   import pkg_resources
+ray init kwargs: {'num_cpus': None, 'runtime_env': {'env_vars': {'TOKENIZERS_PARALLELISM': 'true', 'NCCL_DEBUG': 'WARN', 'VLLM_LOGGING_LEVEL': 'WARN', 'VLLM_ALLOW_RUNTIME_LORA_UPDATING': 'true', 'VLLM_ALLREDUCE_USE_SYMM_MEM': '0', 'CUDA_DEVICE_MAX_CONNECTIONS': '1', 'NCCL_CUMEM_ENABLE': '0'}, 'working_dir': None}}
+[36m(pid=4065519)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:19,496 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(pid=4065519)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:20,244 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(pid=4065519)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:20,994 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m SegmentRolloutTaskRunner hostname: notebook-7f74bd20-25ac-4527-af80-9c73245ecca9, PID: 4065519
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m {'actor_rollout_ref': {'actor': {'_target_': 'verl.workers.config.FSDPActorConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'calculate_entropy': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'checkpoint': {'_target_': 'verl.trainer.config.CheckpointConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'async_save': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'load_contents': ['model',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                   'optimizer',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                   'extra'],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'save_contents': ['model',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                   'optimizer',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                   'extra']},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'clip_ratio': 0.2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'clip_ratio_c': 3.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'clip_ratio_high': 0.2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'clip_ratio_low': 0.2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'data_loader_seed': 42,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'entropy_checkpointing': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'entropy_coeff': 0.001,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'entropy_from_logits_with_chunking': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'freeze_vision_tower': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'fsdp_config': {'_target_': 'verl.workers.config.FSDPEngineConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'dtype': 'bfloat16',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'entropy_checkpointing': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'entropy_from_logits_with_chunking': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'forward_only': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'forward_prefetch': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'fsdp_size': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'full_determinism': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'model_dtype': 'fp32',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'offload_policy': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'optimizer_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'param_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'reshard_after_forward': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'seed': 42,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'use_orig_params': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'use_torch_compile': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'wrap_policy': {'min_num_params': 0}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'grad_clip': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'kl_loss_coef': 0.001,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'kl_loss_type': 'low_var_kl',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'loss_agg_mode': 'token-mean',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'loss_scale_factor': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'optim': {'_target_': 'verl.workers.config.FSDPOptimizerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'betas': [0.9, 0.999],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'clip_grad': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'lr': 5e-07,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'lr_scheduler_type': 'constant',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'lr_warmup_steps': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'lr_warmup_steps_ratio': 0.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'min_lr_ratio': 0.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'num_cycles': 0.5,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'optimizer': 'AdamW',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'optimizer_impl': 'torch.optim',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'override_optimizer_config': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'total_training_steps': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'warmup_style': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                            'weight_decay': 0.01},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'policy_loss': {'_target_': 'verl.workers.config.PolicyLossConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'clip_cov_lb': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'clip_cov_ratio': 0.0002,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'clip_cov_ub': 5.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'kl_cov_ratio': 0.0002,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'loss_mode': 'vanilla',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'ppo_kl_coef': 0.1},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'ppo_epochs': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'ppo_max_token_len_per_gpu': 16384,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'ppo_micro_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'ppo_micro_batch_size_per_gpu': 2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'ppo_mini_batch_size': 64,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'profiler': {'_target_': 'verl.utils.profiler.ProfilerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                               'all_ranks': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                               'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                               'ranks': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                               'save_path': 'outputs/profile',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                               'tool': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                               'tool_config': {'npu': {'_target_': 'verl.utils.profiler.config.NPUToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                       'analysis': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                       'contents': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                       'discrete': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                       'level': 'level0'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                               'nsys': {'_target_': 'verl.utils.profiler.config.NsightToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                        'discrete': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                               'torch': {'_target_': 'verl.utils.profiler.config.TorchProfilerToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                         'step_end': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                         'step_start': 0},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                               'torch_memory': {'_target_': 'verl.utils.profiler.config.TorchMemoryToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'stack_depth': 32,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'trace_alloc_max_entries': 100000}}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'rollout_n': 8,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'router_replay': {'_target_': 'verl.workers.config.RouterReplayConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                    'mode': 'disabled',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                    'record_file': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                    'replay_file': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'shuffle': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'tau_neg': 1.05,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'tau_pos': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_dynamic_bsz': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_fused_kernels': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_kl_loss': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_remove_padding': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_torch_compile': True},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                        'hybrid_engine': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                        'model': {'_target_': 'verl.workers.config.HFModelConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'custom_chat_template': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'enable_activation_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'enable_gradient_checkpointing': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'exclude_modules': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'external_lib': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'fused_kernel_options': {'impl_backend': 'torch'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'hf_config_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'lora_adapter_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'lora_alpha': 16,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'lora_rank': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'override_config': {},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'path': '/home/ma-user/work/models/Qwen2.5-0.5B-Instruct',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'target_modules': 'all-linear',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'tiled_mlp': {'enabled': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'num_shards': 4},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'tokenizer_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'trust_remote_code': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_fused_kernels': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_liger': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_remove_padding': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                  'use_shm': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                        'nccl_timeout': 600,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                        'ref': {'_target_': 'verl.workers.config.FSDPActorConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'entropy_checkpointing': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'entropy_from_logits_with_chunking': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'fsdp_config': {'_target_': 'verl.workers.config.FSDPEngineConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'dtype': 'bfloat16',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'entropy_checkpointing': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'entropy_from_logits_with_chunking': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'forward_only': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'forward_prefetch': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'fsdp_size': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'full_determinism': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'model_dtype': 'fp32',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'offload_policy': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'optimizer_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'param_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'reshard_after_forward': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'seed': 42,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'use_orig_params': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'use_torch_compile': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'wrap_policy': {'min_num_params': 0}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'log_prob_max_token_len_per_gpu': 16384,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'log_prob_micro_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'log_prob_micro_batch_size_per_gpu': 2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'log_prob_use_dynamic_bsz': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'profiler': {'_target_': 'verl.utils.profiler.ProfilerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'all_ranks': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'ranks': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'save_path': 'outputs/profile',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'tool': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'tool_config': {'npu': {'_target_': 'verl.utils.profiler.config.NPUToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                     'analysis': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                     'contents': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                     'discrete': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                     'level': 'level0'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                             'nsys': {'_target_': 'verl.utils.profiler.config.NsightToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                      'discrete': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                             'torch': {'_target_': 'verl.utils.profiler.config.TorchProfilerToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                       'step_end': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                       'step_start': 0},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                             'torch_memory': {'_target_': 'verl.utils.profiler.config.TorchMemoryToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                              'stack_depth': 32,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                              'trace_alloc_max_entries': 100000}}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'rollout_n': 8,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'router_replay': {'_target_': 'verl.workers.config.RouterReplayConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'mode': 'disabled',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'record_file': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'replay_file': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'use_torch_compile': True},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                        'rollout': {'_target_': 'verl.workers.config.RolloutConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'agent': {'_target_': 'verl.workers.config.AgentLoopConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'agent_loop_config_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'custom_async_server': {'_target_': 'verl.workers.config.CustomAsyncServerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                      'name': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                      'path': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'default_agent_loop': 'single_turn_agent',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'num_workers': 8},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'calculate_log_probs': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'cudagraph_capture_sizes': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'data_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'disable_log_stats': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'do_sample': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'dtype': 'bfloat16',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'enable_chunked_prefill': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'enable_prefix_caching': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'enable_rollout_routing_replay': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'enforce_eager': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'engine_kwargs': {'sglang': {}, 'vllm': {}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'expert_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'free_cache_engine': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'gpu_memory_utilization': 0.7,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'ignore_eos': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'layered_summon': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'load_format': 'dummy',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'log_prob_max_token_len_per_gpu': 16384,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'log_prob_micro_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'log_prob_micro_batch_size_per_gpu': 2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'log_prob_use_dynamic_bsz': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'logprobs_mode': 'processed_logprobs',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'max_model_len': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'max_num_batched_tokens': 8192,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'max_num_seqs': 1024,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'mode': 'async',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'multi_stage_wake_up': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'multi_turn': {'_target_': 'verl.workers.config.MultiTurnConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'format': 'hermes',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'interaction_config_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'max_assistant_turns': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'max_parallel_calls': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'max_tool_response_length': 256,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'max_user_turns': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'num_repeat_rollouts': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'tokenization_sanity_check_mode': 'strict',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'tool_config_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'tool_response_truncate_side': 'middle',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'use_inference_chat_template': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'n': 8,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'name': 'vllm',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'over_sample_rate': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'pipeline_model_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'profiler': {'_target_': 'verl.utils.profiler.ProfilerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'all_ranks': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'ranks': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'save_path': 'outputs/profile',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'tool': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                 'tool_config': {'npu': {'_target_': 'verl.utils.profiler.config.NPUToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                         'analysis': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                         'contents': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                         'discrete': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                         'level': 'level0'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                 'nsys': {'_target_': 'verl.utils.profiler.config.NsightToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                          'discrete': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                 'torch': {'_target_': 'verl.utils.profiler.config.TorchProfilerToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                           'step_end': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                           'step_start': 0},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                 'torch_memory': {'_target_': 'verl.utils.profiler.config.TorchMemoryToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                  'stack_depth': 32,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                  'trace_alloc_max_entries': 100000}}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'prometheus': {'_target_': 'verl.workers.config.PrometheusConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'file': '/tmp/ray/session_latest/metrics/prometheus/prometheus.yml',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'port': 9090,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'served_model_name': '/home/ma-user/work/models/Qwen2.5-0.5B-Instruct'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'prompt_length': 2048,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'quantization': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'quantization_config_file': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'response_length': 3072,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'skip_dump_dir': '/tmp/rollout_dump',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'skip_rollout': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'skip_tokenizer_init': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'temperature': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'tensor_model_parallel_size': 2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'top_k': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'top_p': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'trace': {'_target_': 'verl.workers.config.TraceConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'backend': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'max_samples_per_step_per_worker': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                              'token2text': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'update_weights_bucket_megabytes': 512,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                    'val_kwargs': {'_target_': 'verl.workers.config.SamplingConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'do_sample': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'n': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'temperature': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'top_k': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'top_p': 1.0}}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'algorithm': {'_target_': 'verl.trainer.config.AlgoConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'adv_estimator': 'grpo',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'gamma': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'kl_ctrl': {'_target_': 'verl.trainer.config.KLControlConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'horizon': 10000,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'kl_coef': 0.001,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'target_kl': 0.1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'type': 'fixed'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'kl_penalty': 'kl',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'lam': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'norm_adv_by_std_in_grpo': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'pf_ppo': {'reweight_method': 'pow', 'weight_pow': 2.0},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'rollout_correction': {'bypass_mode': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'loss_type': 'ppo_clip',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_is': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_is_batch_normalize': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_is_threshold': 2.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_rs': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_rs_threshold': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_rs_threshold_lower': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'rollout_token_veto_threshold': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'use_kl_in_reward': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                'use_pf_ppo': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'critic': {'_target_': 'verl.workers.config.FSDPCriticConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'checkpoint': {'_target_': 'verl.trainer.config.CheckpointConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'async_save': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'load_contents': ['model', 'optimizer', 'extra'],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                            'save_contents': ['model', 'optimizer', 'extra']},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'cliprange_value': 0.5,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'data_loader_seed': 42,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'enable': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'forward_max_token_len_per_gpu': 32768,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'forward_micro_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'forward_micro_batch_size_per_gpu': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'grad_clip': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'loss_agg_mode': 'token-mean',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'model': {'_target_': 'verl.workers.config.FSDPCriticModelCfg',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'enable_activation_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'enable_gradient_checkpointing': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'external_lib': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'fsdp_config': {'_target_': 'verl.workers.config.FSDPEngineConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'dtype': 'bfloat16',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'entropy_checkpointing': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'entropy_from_logits_with_chunking': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'forward_only': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'forward_prefetch': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'fsdp_size': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'full_determinism': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'model_dtype': 'fp32',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'offload_policy': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'optimizer_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'param_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'reshard_after_forward': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'seed': 42,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'use_orig_params': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'use_torch_compile': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                       'wrap_policy': {'min_num_params': 0}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'lora_alpha': 16,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'lora_rank': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'override_config': {},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'path': '~/models/deepseek-llm-7b-chat',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'target_modules': 'all-linear',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'tiled_mlp': {'enabled': False, 'num_shards': 4},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'tokenizer_path': '/home/ma-user/work/models/Qwen2.5-0.5B-Instruct',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'trust_remote_code': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'use_remove_padding': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'use_shm': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'optim': {'_target_': 'verl.workers.config.FSDPOptimizerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'betas': [0.9, 0.999],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'clip_grad': 1.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'lr': 1e-05,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'lr_scheduler_type': 'constant',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'lr_warmup_steps': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'lr_warmup_steps_ratio': 0.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'min_lr_ratio': 0.0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'num_cycles': 0.5,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'optimizer': 'AdamW',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'optimizer_impl': 'torch.optim',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'override_optimizer_config': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'total_training_steps': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'warmup_style': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                       'weight_decay': 0.01},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'ppo_epochs': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'ppo_max_token_len_per_gpu': 32768,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'ppo_micro_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'ppo_micro_batch_size_per_gpu': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'ppo_mini_batch_size': 64,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'profiler': {'_target_': 'verl.utils.profiler.ProfilerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                          'all_ranks': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                          'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                          'ranks': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                          'save_path': 'outputs/profile',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                          'tool': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                          'tool_config': {'npu': {'_target_': 'verl.utils.profiler.config.NPUToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'analysis': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'contents': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'discrete': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                  'level': 'level0'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                          'nsys': {'_target_': 'verl.utils.profiler.config.NsightToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                   'discrete': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                          'torch': {'_target_': 'verl.utils.profiler.config.TorchProfilerToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                    'step_end': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                    'step_start': 0},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                          'torch_memory': {'_target_': 'verl.utils.profiler.config.TorchMemoryToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                           'stack_depth': 32,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                           'trace_alloc_max_entries': 100000}}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'rollout_n': 8,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'shuffle': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m             'use_dynamic_bsz': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'custom_reward_function': {'name': 'compute_score', 'path': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'data': {'apply_chat_template_kwargs': {},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'custom_cls': {'name': None, 'path': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'datagen': {'name': None, 'path': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'dataloader_num_workers': 8,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'filter_overlong_prompts': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'filter_overlong_prompts_workers': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'image_key': 'images',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'image_patch_size': 14,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'max_prompt_length': 2048,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'max_response_length': 3072,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'prompt_key': 'prompt',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'return_full_prompt': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'return_multi_modal_inputs': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'return_raw_chat': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'return_raw_input_ids': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'reward_fn_key': 'data_source',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'sampler': {'class_name': None, 'class_path': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'seed': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'shuffle': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'tokenizer': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'tool_config_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'train_batch_size': 128,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'train_files': '/home/ma-user/work/data/math/train.parquet',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'train_max_samples': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'truncation': 'error',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'trust_remote_code': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'use_shm': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'val_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'val_files': '/home/ma-user/work/data/math/test.parquet',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'val_max_samples': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'validation_shuffle': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m           'video_key': 'videos'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'global_profiler': {'_target_': 'verl.utils.profiler.ProfilerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                      'global_tool_config': {'nsys': {'_target_': 'verl.utils.profiler.config.NsightToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                      'controller_nsight_options': {'cuda-graph-trace': 'graph',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                    'cuda-memory-usage': 'true',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                    'trace': 'cuda,nvtx,cublas,ucx'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                      'discrete': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                      'worker_nsight_options': {'capture-range': 'cudaProfilerApi',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'capture-range-end': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'cuda-graph-trace': 'graph',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'cuda-memory-usage': 'true',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'kill': 'none',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                                'trace': 'cuda,nvtx,cublas,ucx'}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'torch_memory': {'context': 'all',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                              'kw_args': {},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                              'stack_depth': 32,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                              'stacks': 'all',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                              'trace_alloc_max_entries': 100000}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                      'profile_continuous_steps': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                      'save_path': 'outputs/profile',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                      'steps': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                      'tool': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'ray_kwargs': {'ray_init': {'num_cpus': None}, 'timeline_json_file': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'reward_manager': {'_target_': 'verl.trainer.config.config.RewardManagerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                     'module': {'_target_': 'verl.trainer.config.config.ModuleConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'name': 'custom_reward_manager',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'path': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                     'name': 'naive',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                     'source': 'register'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'reward_model': {'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'enable_resource_pool': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'forward_max_token_len_per_gpu': 32768,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'launch_reward_fn_async': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'max_length': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'micro_batch_size': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'micro_batch_size_per_gpu': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'model': {'external_lib': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'fsdp_config': {'_target_': 'verl.workers.config.FSDPEngineConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'forward_prefetch': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'fsdp_size': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'param_offload': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'reshard_after_forward': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                             'wrap_policy': {'min_num_params': 0}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'input_tokenizer': '/home/ma-user/work/models/Qwen2.5-0.5B-Instruct',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'override_config': {},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'path': '~/models/FsfairX-LLaMA3-RM-v0.1',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'trust_remote_code': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'use_fused_kernels': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'use_remove_padding': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                             'use_shm': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'n_gpus_per_node': 8,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'nnodes': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'num_workers': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'profiler': {'_target_': 'verl.utils.profiler.ProfilerConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'all_ranks': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'enable': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'ranks': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'save_path': 'outputs/profile',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'tool': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m /home/ma-user/work/verl/recipe/segment_rollout/main_segment.py:43: UserWarning: Disabled critic as algorithm.adv_estimator != gae. If it is not intended, please set critic.enable=True
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m   use_critic=need_critic(config),
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m /home/ma-user/work/verl/verl/utils/profiler/config.py:52: UserWarning: Torch profiler tool config is not fully supported now.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):   0%|                                                           | 0/7500 [00:00<?, ? examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                'tool_config': {'npu': {'_target_': 'verl.utils.profiler.config.NPUToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                        'analysis': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                        'contents': [],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                        'discrete': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                        'level': 'level0'},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'nsys': {'_target_': 'verl.utils.profiler.config.NsightToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                         'discrete': False},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'torch': {'_target_': 'verl.utils.profiler.config.TorchProfilerToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                          'step_end': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                          'step_start': 0},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                'torch_memory': {'_target_': 'verl.utils.profiler.config.TorchMemoryToolConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                 'stack_depth': 32,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                                                 'trace_alloc_max_entries': 100000}}},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'reward_loop_class_name': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'reward_loop_module_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'reward_loop_source': 'register',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'reward_manager': 'naive',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'rollout': {'_target_': 'verl.workers.config.RolloutConfig',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'cudagraph_capture_sizes': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'data_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'disable_log_stats': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'dtype': 'bfloat16',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'enable_chunked_prefill': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'enable_prefix_caching': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'enforce_eager': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'engine_kwargs': {},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'expert_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'free_cache_engine': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'gpu_memory_utilization': 0.5,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'limit_images': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'load_format': 'auto',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'max_model_len': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'max_num_batched_tokens': 8192,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'max_num_seqs': 1024,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'name': '???',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'prompt_length': 2048,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'response_length': 2048,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'skip_tokenizer_init': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                               'tensor_model_parallel_size': 2},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'sandbox_fusion': {'max_concurrent': 64,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                      'memory_limit_mb': 1024,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                                      'url': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'strategy': 'fsdp',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'ulysses_sequence_parallel_size': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'use_dynamic_bsz': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m                   'use_reward_loop': True},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'segment_rollout': {'min_train_groups': 128, 'num_segments': 4},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'trainer': {'balance_batch': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'critic_warmup': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'default_hdfs_dir': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'default_local_dir': 'checkpoints/segment_rollout_grpo_math/qwen2_0.5b_segment_rollout_update_log_martrics_mini_train_groups_128',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'del_local_ckpt_after_load': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'device': 'npu',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'esi_redundant_time': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'experiment_name': 'qwen2_0.5b_segment_rollout_update_log_martrics_mini_train_groups_128',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'log_val_generations': 0,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'logger': ['console', 'tensorboard'],
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'max_actor_ckpt_to_keep': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'max_critic_ckpt_to_keep': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'n_gpus_per_node': 2,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'nnodes': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'project_name': 'segment_rollout_grpo_math',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'ray_wait_register_center_timeout': 300,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'resume_from_path': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'resume_mode': 'auto',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'rollout_data_dir': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'save_freq': -1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'test_freq': 5,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'total_epochs': 1,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'total_training_steps': None,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'use_legacy_worker_impl': 'auto',
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'val_before_train': True,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'val_only': False,
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m              'validation_data_dir': None},
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  'transfer_queue': {'enable': False}}
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [validate_config] All configuration checks passed successfully!
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Using dataset class: RLHFDataset
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m dataset len: 7500
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  13%|██████▎                                        | 1000/7500 [00:02<00:13, 494.79 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  27%|████████████▌                                  | 2000/7500 [00:02<00:06, 802.76 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  40%|██████████████████▊                            | 3000/7500 [00:03<00:04, 923.42 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  53%|████████████████████████▌                     | 4000/7500 [00:04<00:03, 1021.14 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  67%|██████████████████████████████▋               | 5000/7500 [00:05<00:02, 1129.62 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  80%|████████████████████████████████████▊         | 6000/7500 [00:05<00:01, 1209.62 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  93%|██████████████████████████████████████████▉   | 7000/7500 [00:06<00:00, 1247.19 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1): 100%|██████████████████████████████████████████████| 7500/7500 [00:06<00:00, 1257.98 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1): 100%|██████████████████████████████████████████████| 7500/7500 [00:07<00:00, 1048.04 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):   0%|                                                           | 0/5000 [00:00<?, ? examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  20%|█████████▍                                     | 1000/5000 [00:02<00:08, 480.02 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  40%|██████████████████▊                            | 2000/5000 [00:02<00:03, 755.47 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  60%|████████████████████████████▏                  | 3000/5000 [00:03<00:02, 899.24 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1):  80%|████████████████████████████████████▊         | 4000/5000 [00:04<00:00, 1046.33 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1): 100%|██████████████████████████████████████████████| 5000/5000 [00:05<00:00, 1136.04 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Filtering prompts longer than 2048 tokens (num_proc=1): 100%|███████████████████████████████████████████████| 5000/5000 [00:05<00:00, 928.11 examples/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m /home/ma-user/work/verl/verl/trainer/ppo/ray_trainer.py:335: UserWarning: Disabled critic as algorithm.adv_estimator != gae. If it is not intended, please set critic.enable=True
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m   self.use_critic = need_critic(self.config)
+[36m(pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4069168)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4069168)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:345: ImportWarning: 
+[36m(pid=4069168)[0m     *************************************************************************************************************
+[36m(pid=4069168)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+[36m(pid=4069168)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+[36m(pid=4069168)[0m     The backend in torch.distributed.init_process_group set to hccl now..
+[36m(pid=4069168)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+[36m(pid=4069168)[0m     The device parameters have been replaced with npu in the function below:
+[36m(pid=4069168)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+[36m(pid=4069168)[0m     *************************************************************************************************************
+[36m(pid=4069168)[0m     
+[36m(pid=4069168)[0m   warnings.warn(msg, ImportWarning)
+[36m(pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+[36m(pid=4069168)[0m   warnings.warn(msg, RuntimeWarning)
+[36m(pid=4069169)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(pid=4069169)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")[32m [repeated 6x across cluster][0m
+[36m(pid=4069169)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.[32m [repeated 3x across cluster][0m
+[36m(pid=4069168)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(pid=4069168)[0m   import pkg_resources
+[36m(pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/ray/util/state/util.py:55: DeprecationWarning: Ray state API is no longer experimental. Please import from `ray.util.state`. instead. Importing from `ray.experimental` will be deprecated in future releases. 
+[36m(pid=4069168)[0m   warnings.warn(
+[36m(WorkerDict pid=4069168)[0m [W324 15:15:01.041747288 compiler_depend.ts:1060] Warning: The watchdog timeout 600000ms(which is set by init_process_group) is less than or equal to HCCL execution timeout 1836000ms! The plog may not be recorded. (function ProcessGroupHCCL)
+[36m(WorkerDict pid=4069169)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing
+[36m(WorkerDict pid=4069169)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)
+[36m(WorkerDict pid=4069169)[0m `torch_dtype` is deprecated! Use `dtype` instead!
+[36m(pid=4069169)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(pid=4069169)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/ray/util/state/util.py:55: DeprecationWarning: Ray state API is no longer experimental. Please import from `ray.util.state`. instead. Importing from `ray.experimental` will be deprecated in future releases. 
+[36m(pid=4069169)[0m   warnings.warn(
+[36m(WorkerDict pid=4069168)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=4069168)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=4069168)[0m `torch_dtype` is deprecated! Use `dtype` instead!
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:26,772 WARNING [datasets.arrow_dataset:3258] => Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m filter dataset len: 7500
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Using dataset class: RLHFDataset
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m dataset len: 5000
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:36,193 WARNING [datasets.arrow_dataset:3258] => Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m filter dataset len: 5000
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Size of train dataloader: 58, Size of val dataloader: 1
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Total training steps: 58
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m colocated worker base class <class 'verl.single_controller.base.worker.Worker'>
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m bind role actor_rollout method chat_completion to class <class 'verl.single_controller.ray.base.create_colocated_worker_cls.<locals>.WorkerDict'>
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m bind role actor_rollout method generate to class <class 'verl.single_controller.ray.base.create_colocated_worker_cls.<locals>.WorkerDict'>
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m bind role actor_rollout method get_zeromq_address to class <class 'verl.single_controller.ray.base.create_colocated_worker_cls.<locals>.WorkerDict'>
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m bind role actor_rollout method sleep to class <class 'verl.single_controller.ray.base.create_colocated_worker_cls.<locals>.WorkerDict'>
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m bind role actor_rollout method wake_up to class <class 'verl.single_controller.ray.base.create_colocated_worker_cls.<locals>.WorkerDict'>
+[36m(pid=4069168)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:58,649 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(pid=4069168)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:14:59,784 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(WorkerDict pid=4069168)[0m reference model: /home/ma-user/work/models/Qwen2.5-0.5B-Instruct
+[36m(WorkerDict pid=4069168)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=4069168)[0m   "architectures": [
+[36m(WorkerDict pid=4069168)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=4069168)[0m   ],
+[36m(WorkerDict pid=4069168)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=4069168)[0m   "dtype": "bfloat16",
+[36m(WorkerDict pid=4069168)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=4069168)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=4069168)[0m   "hidden_size": 896,
+[36m(WorkerDict pid=4069168)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=4069168)[0m   "intermediate_size": 4864,
+[36m(WorkerDict pid=4069168)[0m   "layer_types": [
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention"
+[36m(WorkerDict pid=4069168)[0m   ],
+[36m(WorkerDict pid=4069168)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=4069168)[0m   "max_window_layers": 21,
+[36m(WorkerDict pid=4069168)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=4069168)[0m   "num_attention_heads": 14,
+[36m(WorkerDict pid=4069168)[0m   "num_hidden_layers": 24,
+[36m(WorkerDict pid=4069168)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=4069168)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=4069168)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=4069168)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=4069168)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=4069168)[0m   "sliding_window": null,
+[36m(WorkerDict pid=4069168)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=4069168)[0m   "transformers_version": "4.57.3",
+[36m(WorkerDict pid=4069168)[0m   "use_cache": true,
+[36m(WorkerDict pid=4069168)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=4069168)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=4069168)[0m }
+[36m(WorkerDict pid=4069168)[0m 
+[36m(pid=4069169)[0m [Rank 1 | Local Rank 0] 2026-03-24 15:14:58,649 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(WorkerDict pid=4069169)[0m Skipping monkey patch for Qwen2ForCausalLM as use_fused_kernels is False or fused_kernels_backend is torch
+[36m(pid=4069169)[0m [Rank 1 | Local Rank 0] 2026-03-24 15:15:00,527 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=4069168)[0m Qwen2ForCausalLM contains 494.03M parameters
+[36m(WorkerDict pid=4069168)[0m wrap_policy: functools.partial(<function _or_policy at 0xffe279055510>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0xffe2790553f0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+[36m(WorkerDict pid=4069168)[0m Ref use_remove_padding=False
+[36m(WorkerDict pid=4069168)[0m Ref use_fused_kernels=False
+[36m(WorkerDict pid=4069168)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=4069168)[0m   "architectures": [
+[36m(WorkerDict pid=4069168)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=4069168)[0m   ],
+[36m(WorkerDict pid=4069168)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=4069168)[0m   "dtype": "bfloat16",
+[36m(WorkerDict pid=4069168)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=4069168)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=4069168)[0m   "hidden_size": 896,
+[36m(WorkerDict pid=4069168)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=4069168)[0m   "intermediate_size": 4864,
+[36m(WorkerDict pid=4069168)[0m   "layer_types": [
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m /home/ma-user/work/verl/verl/utils/profiler/config.py:52: UserWarning: Torch profiler tool config is not fully supported now.
+[36m(WorkerDict pid=4069168)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)
+[36m(WorkerDict pid=4069168)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+[36m(WorkerDict pid=4069168)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+[36m(WorkerDict pid=4069169)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=4069169)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=4069169)[0m /home/ma-user/work/verl/verl/utils/profiler/config.py:52: UserWarning: Torch profiler tool config is not fully supported now.
+[36m(WorkerDict pid=4069169)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)
+[36m(WorkerDict pid=4069168)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:680: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=4069168)[0m   warnings.warn(
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m /home/ma-user/work/verl/verl/utils/profiler/config.py:52: UserWarning: Torch profiler tool config is not fully supported now.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute[32m [repeated 2x across cluster][0m
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=4069169)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:680: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=4069169)[0m   warnings.warn(
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(pid=4070481)[0m   import pkg_resources
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: 
+[36m(pid=4070481)[0m     *************************************************************************************************************
+[36m(pid=4070481)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+[36m(pid=4070481)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+[36m(pid=4070481)[0m     The backend in torch.distributed.init_process_group set to hccl now..
+[36m(pid=4070481)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+[36m(pid=4070481)[0m     The device parameters have been replaced with npu in the function below:
+[36m(pid=4070481)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+[36m(pid=4070481)[0m     *************************************************************************************************************
+[36m(pid=4070481)[0m     
+[36m(pid=4070481)[0m   warnings.warn(msg, ImportWarning)
+[36m(pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+[36m(pid=4070481)[0m   warnings.warn(msg, RuntimeWarning)
+[36m(pid=4070481)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention",
+[36m(WorkerDict pid=4069168)[0m     "full_attention"
+[36m(WorkerDict pid=4069168)[0m   ],
+[36m(WorkerDict pid=4069168)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=4069168)[0m   "max_window_layers": 21,
+[36m(WorkerDict pid=4069168)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=4069168)[0m   "num_attention_heads": 14,
+[36m(WorkerDict pid=4069168)[0m   "num_hidden_layers": 24,
+[36m(WorkerDict pid=4069168)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=4069168)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=4069168)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=4069168)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=4069168)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=4069168)[0m   "sliding_window": null,
+[36m(WorkerDict pid=4069168)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=4069168)[0m   "transformers_version": "4.57.3",
+[36m(WorkerDict pid=4069168)[0m   "use_cache": true,
+[36m(WorkerDict pid=4069168)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=4069168)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=4069168)[0m }
+[36m(WorkerDict pid=4069168)[0m 
+[36m(WorkerDict pid=4069168)[0m Skipping monkey patch for Qwen2ForCausalLM as use_fused_kernels is False or fused_kernels_backend is torch
+[36m(WorkerDict pid=4069169)[0m Skipping monkey patch for Qwen2ForCausalLM as use_fused_kernels is False or fused_kernels_backend is torch
+[36m(WorkerDict pid=4069168)[0m Qwen2ForCausalLM contains 494.03M parameters
+[36m(WorkerDict pid=4069168)[0m wrap_policy: functools.partial(<function _or_policy at 0xffe279055510>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0xffe2790553f0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+[36m(WorkerDict pid=4069168)[0m Total steps: 58, num_warmup_steps: 0
+[36m(WorkerDict pid=4069168)[0m Actor use_remove_padding=False
+[36m(WorkerDict pid=4069168)[0m Actor use_fused_kernels=False
+[36m(WorkerDict pid=4069168)[0m WARNING 03-24 15:15:20 [_custom_ops.py:20] Failed to import from vllm._C with ModuleNotFoundError("No module named 'vllm._C'")
+[36m(WorkerDict pid=4069168)[0m Skipping monkey patch for Qwen2ForCausalLM as use_fused_kernels is False or fused_kernels_backend is torch
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m WARNING 03-24 15:15:24 [api_server.py:1213] LoRA dynamic loading & unloading is enabled in the API server. This should ONLY be used for local development!
+[36m(pid=4070481)[0m WARNING 03-24 15:15:44 [_custom_ops.py:20] Failed to import from vllm._C with ModuleNotFoundError("No module named 'vllm._C'")[32m [repeated 3x across cluster][0m
+[36m(pid=4070481)[0m WARNING 03-24 15:15:45 [api_server.py:1213] LoRA dynamic loading & unloading is enabled in the API server. This should ONLY be used for local development!
+[36m(pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:46,822 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:46,855 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:47,825 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:49,898 INFO [/home/ma-user/work/verl/verl/workers/rollout/vllm_rollout/vllm_async_server.py:220] => vLLMHttpServer, replica_rank: 0, master address: 172.16.0.125, master port: 44157, data parallel master port: 45415
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:49,915 INFO [/home/ma-user/work/verl/verl/workers/rollout/vllm_rollout/vllm_async_server.py:260] => override_generation_config: {'temperature': 1.0, 'top_k': -1, 'top_p': 1, 'repetition_penalty': 1.0, 'max_new_tokens': 3072}
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:49,915 INFO [/home/ma-user/work/verl/verl/workers/rollout/vllm_rollout/vllm_async_server.py:262] => enable_sleep_mode: True
+[36m(vLLMHttpServer pid=4070481)[0m ['serve',
+[36m(vLLMHttpServer pid=4070481)[0m  '/home/ma-user/work/models/Qwen2.5-0.5B-Instruct',
+[36m(vLLMHttpServer pid=4070481)[0m  '--dtype',
+[36m(vLLMHttpServer pid=4070481)[0m  'bfloat16',
+[36m(vLLMHttpServer pid=4070481)[0m  '--load_format',
+[36m(vLLMHttpServer pid=4070481)[0m  'dummy',
+[36m(vLLMHttpServer pid=4070481)[0m  '--max_model_len',
+[36m(vLLMHttpServer pid=4070481)[0m  '32768',
+[36m(vLLMHttpServer pid=4070481)[0m  '--max_num_seqs',
+[36m(vLLMHttpServer pid=4070481)[0m  '1024',
+[36m(vLLMHttpServer pid=4070481)[0m  '--max_num_batched_tokens',
+[36m(vLLMHttpServer pid=4070481)[0m  '8192',
+[36m(vLLMHttpServer pid=4070481)[0m  '--enable_prefix_caching',
+[36m(vLLMHttpServer pid=4070481)[0m  '--enable_sleep_mode',
+[36m(vLLMHttpServer pid=4070481)[0m  '--logprobs_mode',
+[36m(vLLMHttpServer pid=4070481)[0m  'processed_logprobs',
+[36m(vLLMHttpServer pid=4070481)[0m  '--disable_custom_all_reduce',
+[36m(vLLMHttpServer pid=4070481)[0m  '--gpu_memory_utilization',
+[36m(vLLMHttpServer pid=4070481)[0m  '0.7',
+[36m(vLLMHttpServer pid=4070481)[0m  '--disable_log_stats',
+[36m(vLLMHttpServer pid=4070481)[0m  '--tensor_parallel_size',
+[36m(vLLMHttpServer pid=4070481)[0m  '2',
+[36m(vLLMHttpServer pid=4070481)[0m  '--seed',
+[36m(vLLMHttpServer pid=4070481)[0m  '0',
+[36m(vLLMHttpServer pid=4070481)[0m  '--override_generation_config',
+[36m(vLLMHttpServer pid=4070481)[0m  '{"temperature": 1.0, "top_k": -1, "top_p": 1, "repetition_penalty": 1.0, '
+[36m(vLLMHttpServer pid=4070481)[0m  '"max_new_tokens": 3072}',
+[36m(vLLMHttpServer pid=4070481)[0m  '--hf_overrides',
+[36m(vLLMHttpServer pid=4070481)[0m  '{}']
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture Qwen3VLMoeForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl_without_padding:AscendQwen3VLMoeForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture Qwen3VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl_without_padding:AscendQwen3VLForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture Qwen2_5OmniModel is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_omni_thinker:AscendQwen2_5OmniThinkerForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture DeepseekV32ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v3_2:CustomDeepseekV3ForCausalLM.
+[36m(vLLMHttpServer pid=4070481)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(vLLMHttpServer pid=4070481)[0m `torch_dtype` is deprecated! Use `dtype` instead!
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(vLLMHttpServer pid=4070481)[0m   import pkg_resources
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: 
+[36m(vLLMHttpServer pid=4070481)[0m     *************************************************************************************************************
+[36m(vLLMHttpServer pid=4070481)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+[36m(vLLMHttpServer pid=4070481)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+[36m(vLLMHttpServer pid=4070481)[0m     The backend in torch.distributed.init_process_group set to hccl now..
+[36m(vLLMHttpServer pid=4070481)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+[36m(vLLMHttpServer pid=4070481)[0m     The device parameters have been replaced with npu in the function below:
+[36m(vLLMHttpServer pid=4070481)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+[36m(vLLMHttpServer pid=4070481)[0m     *************************************************************************************************************
+[36m(vLLMHttpServer pid=4070481)[0m     
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(msg, ImportWarning)
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(msg, RuntimeWarning)
+[36m(vLLMHttpServer pid=4070481)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):   0%|                                                                    | 0/23 [00:00<?, ?it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):   9%|█████▏                                                      | 2/23 [00:00<00:01, 12.18it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  17%|██████████▍                                                 | 4/23 [00:00<00:01, 11.95it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  26%|███████████████▋                                            | 6/23 [00:00<00:01, 12.07it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  35%|████████████████████▊                                       | 8/23 [00:00<00:01, 12.24it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  43%|█████████████████████████▋                                 | 10/23 [00:00<00:01, 12.35it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  52%|██████████████████████████████▊                            | 12/23 [00:00<00:00, 12.09it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  61%|███████████████████████████████████▉                       | 14/23 [00:01<00:00, 12.11it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  70%|█████████████████████████████████████████                  | 16/23 [00:01<00:00, 11.87it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  78%|██████████████████████████████████████████████▏            | 18/23 [00:01<00:00, 11.88it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  87%|███████████████████████████████████████████████████▎       | 20/23 [00:01<00:00, 12.05it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE):  96%|████████████████████████████████████████████████████████▍  | 22/23 [00:01<00:00, 12.22it/s]
+[36m(WorkerDict pid=4069168)[0m Capturing ACL graphs (mixed prefill-decode, PIECEWISE): 100%|███████████████████████████████████████████████████████████| 23/23 [00:01<00:00, 12.16it/s]
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m /home/ma-user/.conda/envs/test01/lib/python3.10/contextlib.py:142: ResourceWarning: Unclosed context <zmq.Context() at 0xffff23e684f0>
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m   next(self.gen)
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:49 [registry.py:582] Model architecture Qwen3NextForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_next:CustomQwen3NextForCausalLM.
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:15:50,065 INFO [/home/ma-user/work/verl/verl/workers/rollout/vllm_rollout/vllm_async_server.py:393] => replica_rank=0, node_rank=0, nnodes=1, get worker zmq addresses: ['ipc:///tmp/verl_vllm_zmq_4069168_ma-user.ipc', 'ipc:///tmp/verl_vllm_zmq_4069169_ma-user.ipc']
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:50 [utils.py:396] Currently, communication is performed using FFTS+ method, which reduces the number of available streams and, as a result, limits the range of runtime shapes that can be handled. To both improve communication performance and increase the number of supported shapes, set HCCL_OP_EXPANSION_MODE=AIV.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:50 [platform.py:270] If chunked prefill or prefix caching is enabled, block size must be set to 128.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:15:50 [__init__.py:3036] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: In a Ray actor and can only be spawned
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:16:07 [_custom_ops.py:20] Failed to import from vllm._C with ModuleNotFoundError("No module named 'vllm._C'")
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:16:08 [api_server.py:1213] LoRA dynamic loading & unloading is enabled in the API server. This should ONLY be used for local development!
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:09,492 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:09,512 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:10,375 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen3VLMoeForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl_without_padding:AscendQwen3VLMoeForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen3VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl_without_padding:AscendQwen3VLForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen2_5OmniModel is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_omni_thinker:AscendQwen2_5OmniThinkerForConditionalGeneration.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture DeepseekV32ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v3_2:CustomDeepseekV3ForCausalLM.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen3NextForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_next:CustomQwen3NextForCausalLM.
+[36m(WorkerDict pid=4069169)[0m WARNING 03-24 15:16:16 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[36m(WorkerDict pid=4069169)[0m WARNING 03-24 15:16:11 [api_server.py:1213] LoRA dynamic loading & unloading is enabled in the API server. This should ONLY be used for local development![32m [repeated 2x across cluster][0m
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:22 [utils.py:396] Currently, communication is performed using FFTS+ method, which reduces the number of available streams and, as a result, limits the range of runtime shapes that can be handled. To both improve communication performance and increase the number of supported shapes, set HCCL_OP_EXPANSION_MODE=AIV.
+[36m(vLLMHttpServer pid=4070481)[0m [1;36m(EngineCore_DP0 pid=4071177)[0;0m WARNING 03-24 15:16:22 [platform.py:270] If chunked prefill or prefix caching is enabled, block size must be set to 128.
+[36m(WorkerDict pid=4069169)[0m WARNING 03-24 15:16:11 [registry.py:582] Model architecture Qwen3NextForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_next:CustomQwen3NextForCausalLM.[32m [repeated 14x across cluster][0m
+[36m(WorkerDict pid=4069168)[0m WARNING 03-24 15:16:16 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[36m(vLLMHttpServer pid=4070481)[0m WARNING 03-24 15:16:22 [model.py:1389] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/websockets/legacy/__init__.py:6: DeprecationWarning: websockets.legacy is deprecated; see https://websockets.readthedocs.io/en/stable/howto/upgrade.html for upgrade instructions
+[36m(vLLMHttpServer pid=4070481)[0m   warnings.warn(  # deprecated in 14.0 - 2024-11-09
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/uvicorn/protocols/websockets/websockets_impl.py:17: DeprecationWarning: websockets.server.WebSocketServerProtocol is deprecated
+[36m(vLLMHttpServer pid=4070481)[0m   from websockets.server import WebSocketServerProtocol
+[36m(vLLMHttpServer pid=4070481)[0m /home/ma-user/work/verl/verl/workers/rollout/vllm_rollout/vllm_async_server.py:432: ResourceWarning: unclosed <socket.socket fd=77, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.16.0.125', 45307)>
+[36m(vLLMHttpServer pid=4070481)[0m   self._server_port, self._server_task = await run_unvicorn(app, args, self._server_address)
+[36m(pid=4071887)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4071887)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4071887)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4071887)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4071887)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: 
+[36m(pid=4071887)[0m     *************************************************************************************************************
+[36m(pid=4071887)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+[36m(pid=4071887)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+[36m(pid=4071887)[0m     The backend in torch.distributed.init_process_group set to hccl now..
+[36m(pid=4071887)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+[36m(pid=4071887)[0m     The device parameters have been replaced with npu in the function below:
+[36m(pid=4071887)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+[36m(pid=4071887)[0m     *************************************************************************************************************
+[36m(pid=4071887)[0m     
+[36m(pid=4071887)[0m   warnings.warn(msg, ImportWarning)
+[36m(pid=4071887)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+[36m(pid=4071887)[0m   warnings.warn(msg, RuntimeWarning)
+[36m(pid=4071931)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.[32m [repeated 15x across cluster][0m
+[36m(pid=4071931)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")[32m [repeated 30x across cluster][0m
+[36m(pid=4071931)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.[32m [repeated 15x across cluster][0m
+[36m(pid=4071887)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(pid=4071887)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(pid=4071887)[0m   import pkg_resources
+[36m(pid=4071888)[0m     
+[36m(pid=4071908)[0m     
+[36m(pid=4071911)[0m     
+[36m(pid=4071926)[0m     
+[36m(pid=4071912)[0m     
+[36m(pid=4071927)[0m     
+[36m(pid=4071931)[0m     
+[36m(AgentLoopWorker pid=4071888)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+[36m(AgentLoopWorker pid=4071888)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+[36m(pid=4071931)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: [32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m     *************************************************************************************************************[32m [repeated 14x across cluster][0m
+[36m(pid=4071931)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m     The backend in torch.distributed.init_process_group set to hccl now..[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m     The device parameters have been replaced with npu in the function below:[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m   warnings.warn(msg, ImportWarning)[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m   warnings.warn(msg, RuntimeWarning)[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m   import pkg_resources[32m [repeated 7x across cluster][0m
+[36m(AgentLoopWorker pid=4071888)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing
+[36m(AgentLoopWorker pid=4071888)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)
+[36m(pid=4073823)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+[36m(pid=4073823)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(pid=4073823)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+[36m(pid=4073823)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[36m(AgentLoopWorker pid=4071931)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute[32m [repeated 7x across cluster][0m
+[36m(AgentLoopWorker pid=4071931)[0m <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute[32m [repeated 7x across cluster][0m
+[36m(AgentLoopWorker pid=4071931)[0m /home/ma-user/work/verl/verl/utils/tokenizer.py:107: UserWarning: Failed to create processor: Unsupported processor type: Qwen2TokenizerFast. This may affect multimodal processing[32m [repeated 7x across cluster][0m
+[36m(AgentLoopWorker pid=4071931)[0m   warnings.warn(f"Failed to create processor: {e}. This may affect multimodal processing", stacklevel=1)[32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=4069168)[0m [rank0]:[W324 15:17:02.889582375 compiler_depend.ts:117] Warning: Driver Version: 9 is invalid or not supported yet. (function operator())
+[36m(pid=4074353)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.[32m [repeated 15x across cluster][0m
+[36m(pid=4074353)[0m   warnings.warn(f"Warning: The {path} owner does not match the current owner.")[32m [repeated 30x across cluster][0m
+[36m(pid=4074353)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.3.RC1.alpha003/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.[32m [repeated 15x across cluster][0m
+[36m(pid=4073823)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: 
+[36m(pid=4073823)[0m     *************************************************************************************************************
+[36m(pid=4073823)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+[36m(pid=4073823)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+[36m(pid=4073823)[0m     The backend in torch.distributed.init_process_group set to hccl now..
+[36m(pid=4073823)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+[36m(pid=4073823)[0m     The device parameters have been replaced with npu in the function below:
+[36m(pid=4073823)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+[36m(pid=4073823)[0m     *************************************************************************************************************
+[36m(pid=4073823)[0m     
+[36m(pid=4073823)[0m   warnings.warn(msg, ImportWarning)
+[36m(pid=4073823)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+[36m(pid=4073823)[0m   warnings.warn(msg, RuntimeWarning)
+[36m(pid=4073823)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[36m(pid=4073823)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[36m(pid=4073823)[0m   import pkg_resources
+[36m(pid=4073874)[0m     
+[36m(pid=4073940)[0m     
+[36m(pid=4073994)[0m     
+[36m(pid=4074068)[0m     
+[36m(pid=4074131)[0m     
+[36m(pid=4074077)[0m     
+[36m(pid=4074353)[0m     
+[36m(AgentLoopWorker pid=4071927)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(pid=4074353)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:347: ImportWarning: [32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m     *************************************************************************************************************[32m [repeated 14x across cluster][0m
+[36m(pid=4074353)[0m     The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m     The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m     The backend in torch.distributed.init_process_group set to hccl now..[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m     The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m     The device parameters have been replaced with npu in the function below:[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m     torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m   warnings.warn(msg, ImportWarning)[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m   warnings.warn(msg, RuntimeWarning)[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m Using /home/ma-user/.cache/torch_extensions/py310_cpu as PyTorch extensions root...[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m /home/ma-user/.conda/envs/test01/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.[32m [repeated 7x across cluster][0m
+[36m(pid=4074353)[0m   import pkg_resources[32m [repeated 7x across cluster][0m
+[36m(AgentLoopWorker pid=4071912)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(AgentLoopWorker pid=4071888)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(AgentLoopWorker pid=4071887)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(AgentLoopWorker pid=4071908)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(AgentLoopWorker pid=4071911)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(AgentLoopWorker pid=4071926)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(AgentLoopWorker pid=4071931)[0m You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:   0%|                                                                                                 | 0/58 [00:00<?, ?it/s]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:   2%|█▍                                                                                   | 1/58 [11:29<10:54:51, 689.32s/it]
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:22,876 INFO [/home/ma-user/work/verl/verl/workers/rollout/vllm_rollout/vllm_async_server.py:429] => Initializing a V1 LLM engine with config: model='/home/ma-user/work/models/Qwen2.5-0.5B-Instruct', speculative_config=None, tokenizer='/home/ma-user/work/models/Qwen2.5-0.5B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=dummy, tensor_parallel_size=2, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=npu, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/home/ma-user/work/models/Qwen2.5-0.5B-Instruct, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention","vllm.sparse_attn_indexer","vllm.unified_ascend_attention_with_output","vllm.mla_forward"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,488,464,440,416,392,368,344,320,296,272,248,224,200,176,152,128,104,80,56,32,8,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[36m(vLLMHttpServer pid=4070481)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:23,737 INFO [/home/ma-user/work/verl/verl/workers/rollout/utils.py:67] => HTTP server started on port 45307
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m AgentLoopManager: ['172.16.0.125:45307']
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Saving tensorboard log to tensorboard_log/segment_rollout_grpo_math/qwen2_0.5b_segment_rollout_update_log_martrics_mini_train_groups_128.
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] config: num_segments=4, seg_len=768, max_response_length=3072, n=8, min_train_groups=128
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Checkpoint tracker file does not exist: /home/ma-user/work/verl/checkpoints/segment_rollout_grpo_math/qwen2_0.5b_segment_rollout_update_log_martrics_mini_train_groups_128/latest_checkpointed_iteration.txt
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Training from scratch
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m test_gen_batch meta info: {'eos_token_id': 151645, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True, 'global_steps': 0}
+[36m(pid=4071887)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:40,010 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(pid=4071887)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:40,781 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(AgentLoopWorker pid=4071888)[0m WARNING 03-24 15:16:46 [_custom_ops.py:20] Failed to import from vllm._C with ModuleNotFoundError("No module named 'vllm._C'")
+[36m(pid=4071931)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:40,751 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.[32m [repeated 7x across cluster][0m
+[36m(pid=4071931)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:16:42,363 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False[32m [repeated 15x across cluster][0m
+[36m(AgentLoopWorker pid=4071888)[0m WARNING 03-24 15:16:47 [api_server.py:1213] LoRA dynamic loading & unloading is enabled in the API server. This should ONLY be used for local development!
+[36m(AgentLoopWorker pid=4071888)[0m Using dataset class: RLHFDataset
+[36m(AgentLoopWorker pid=4071931)[0m WARNING 03-24 15:16:47 [_custom_ops.py:20] Failed to import from vllm._C with ModuleNotFoundError("No module named 'vllm._C'")[32m [repeated 7x across cluster][0m
+[36m(pid=4073823)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:17:03,922 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(AgentLoopWorker pid=4071931)[0m WARNING 03-24 15:16:48 [api_server.py:1213] LoRA dynamic loading & unloading is enabled in the API server. This should ONLY be used for local development![32m [repeated 7x across cluster][0m
+[36m(AgentLoopWorker pid=4071931)[0m Using dataset class: RLHFDataset[32m [repeated 7x across cluster][0m
+[36m(pid=4073874)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:17:04,216 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.
+[36m(pid=4073823)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:17:05,100 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m validation generation end
+[36m(pid=4074353)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:17:06,376 INFO [mindspeed.megatron_adaptor:33] => start to patch features in megatron adaptor.[32m [repeated 6x across cluster][0m
+[36m(pid=4074353)[0m [Rank 0 | Local Rank 0] 2026-03-24 15:17:08,524 INFO [mindspeed.features_manager.ckpt_acceleration.ckpt_acceleration:15] => ckpt acceleration is_need_apply patches enterckpt_acceleration: False[32m [repeated 15x across cluster][0m
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m ('Initial validation metrics: '
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  "{'val-aux/DigitalLearningGmbH/MATH-lighteval/reward/mean@1': 0.319, "
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  "'val-core/DigitalLearningGmbH/MATH-lighteval/acc/mean@1': 0.319, "
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  "'val-aux/num_turns/min': 2, 'val-aux/num_turns/max': 2, "
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m  "'val-aux/num_turns/mean': 2.0}")
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:0 - val-aux/DigitalLearningGmbH/MATH-lighteval/reward/mean@1:0.319 - val-core/DigitalLearningGmbH/MATH-lighteval/acc/mean@1:0.319 - val-aux/num_turns/min:2 - val-aux/num_turns/max:2 - val-aux/num_turns/mean:2.0
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 1 | Seg1: 819/1024 finished (79%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 1: gen only | unfinished=205 | pool_samples=819 | complete_groups=69 (need 128)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 2 | Seg1: 756/1024 finished (73%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 2 | Continuation: 195/205 finished (eos=195, maxlen=0), 278 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 1: 164 groups (1312 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 1 (pipeline=2) === groups=164 | unfinished=278 | pool_remaining=458 | reward=0.8s | old_log_prob=92.5s | ref_log_prob=84.8s | adv=0.1s | update_actor=261.0s | train=441.0s | gen=247.8s | step=688.9s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:   3%|██▉                                                                                  | 2/58 [27:33<13:14:21, 851.11s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:   5%|████▍                                                                                | 3/58 [35:59<10:35:27, 693.23s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:   7%|█████▊                                                                               | 4/58 [51:27<11:47:29, 786.10s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:1 - critic/score/mean:0.37881097197532654 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.37881097197532654 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.026638371869921684 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.026638371869921684 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:483.8117370605469 - response_length/max:1533.0 - response_length/min:5.0 - response_length/clip_ratio:0.0 - response_length_non_aborted/mean:483.8117370605469 - response_length_non_aborted/max:1533.0 - response_length_non_aborted/min:5.0 - response_length_non_aborted/clip_ratio:0.0 - response/aborted_ratio:0.0 - prompt_length/mean:99.95121765136719 - prompt_length/max:476.0 - prompt_length/min:54.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:0.8472385555505753 - timing_s/old_log_prob:92.53532209992409 - timing_s/ref_log_prob:84.79274310916662 - timing_s/adv:0.10201118141412735 - timing_s/update_actor:261.03561647981405 - timing_s/train:441.03031360358 - timing_s/gen:247.751558303833 - timing_s/step:688.8958971500397 - timing_per_token_ms/gen:0.3903068372250863 - timing_per_token_ms/adv:0.00013319177567496329 - timing_per_token_ms/update_actor:0.3408233959394201 - perf/total_num_tokens:765897 - perf/time_per_step:688.8958971500397 - perf/throughput:555.8873286722375 - training/global_step:1 - training/epoch:0 - segment_rollout/pipeline_step:2 - segment_rollout/train_groups:164 - segment_rollout/train_samples:1312 - segment_rollout/unfinished_pool_size:278 - segment_rollout/experience_pool_samples:458
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 3 | Seg1: 781/1024 finished (76%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 3 | Continuation: 259/278 finished (eos=259, maxlen=0), 262 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 3: gen only | unfinished=262 | pool_samples=1498 | complete_groups=124 (need 128)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 4 | Seg1: 760/1024 finished (74%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 4 | Continuation: 246/262 finished (eos=243, maxlen=3), 280 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 2: 257 groups (2056 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 2 (pipeline=4) === groups=257 | unfinished=280 | pool_remaining=448 | reward=1.4s | old_log_prob=143.7s | ref_log_prob=131.5s | adv=0.2s | update_actor=409.7s | train=689.3s | gen=274.8s | step=964.3s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:2 - critic/score/mean:0.2247081696987152 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.2247081696987152 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.02117658033967018 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.02117658033967018 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:594.0787963867188 - response_length/max:3072.0 - response_length/min:2.0 - response_length/clip_ratio:0.0014591439394280314 - response_length_non_aborted/mean:594.0787963867188 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:2.0 - response_length_non_aborted/clip_ratio:0.0014591439394280314 - response/aborted_ratio:0.0 - prompt_length/mean:119.64202117919922 - prompt_length/max:840.0 - prompt_length/min:54.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:1.4303621426224709 - timing_s/old_log_prob:143.6841980367899 - timing_s/ref_log_prob:131.49018401652575 - timing_s/adv:0.16128230839967728 - timing_s/update_actor:409.7468590736389 - timing_s/train:689.3004004508257 - timing_s/gen:274.7603180408478 - timing_s/step:964.2887728214264 - timing_per_token_ms/gen:0.22495044156653599 - timing_per_token_ms/adv:0.00010990950613644263 - timing_per_token_ms/update_actor:0.27923133893979113 - perf/total_num_tokens:1467410 - perf/time_per_step:964.2887728214264 - perf/throughput:760.8768458988089 - training/global_step:2 - training/epoch:0 - segment_rollout/pipeline_step:4 - segment_rollout/train_groups:257 - segment_rollout/train_samples:2056 - segment_rollout/unfinished_pool_size:280 - segment_rollout/experience_pool_samples:448
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 5 | Seg1: 827/1024 finished (80%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 5 | Continuation: 264/280 finished (eos=259, maxlen=5), 213 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 3: 139 groups (1112 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 3 (pipeline=5) === groups=139 | unfinished=213 | pool_remaining=427 | reward=0.8s | old_log_prob=77.4s | ref_log_prob=70.5s | adv=0.1s | update_actor=220.8s | train=371.1s | gen=134.1s | step=505.3s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:3 - critic/score/mean:0.24730215966701508 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.24730215966701508 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.01815253496170044 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.01815253496170044 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:587.943359375 - response_length/max:3072.0 - response_length/min:11.0 - response_length/clip_ratio:0.0044964030385017395 - response_length_non_aborted/mean:587.943359375 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:11.0 - response_length_non_aborted/clip_ratio:0.0044964030385017395 - response/aborted_ratio:0.0 - prompt_length/mean:130.1798553466797 - prompt_length/max:884.0 - prompt_length/min:54.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:0.7635859847068787 - timing_s/old_log_prob:77.41365011781454 - timing_s/ref_log_prob:70.53872076421976 - timing_s/adv:0.1252540573477745 - timing_s/update_actor:220.83006582409143 - timing_s/train:371.0867844000459 - timing_s/gen:134.12902235984802 - timing_s/step:505.3251919746399 - timing_per_token_ms/gen:0.20515518269520785 - timing_per_token_ms/adv:0.00015685127643096263 - timing_per_token_ms/update_actor:0.27653776997155033 - perf/total_num_tokens:798553 - perf/time_per_step:505.3251919746399 - perf/throughput:790.137729804767 - training/global_step:3 - training/epoch:0 - segment_rollout/pipeline_step:5 - segment_rollout/train_groups:139 - segment_rollout/train_samples:1112 - segment_rollout/unfinished_pool_size:213 - segment_rollout/experience_pool_samples:427
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 6 | Seg1: 785/1024 finished (76%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 6 | Continuation: 199/213 finished (eos=196, maxlen=3), 253 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 6: gen only | unfinished=253 | pool_samples=1411 | complete_groups=120 (need 128)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 7 | Seg1: 797/1024 finished (77%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 7 | Continuation: 237/253 finished (eos=236, maxlen=1), 243 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 4: 249 groups (1992 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 4 (pipeline=7) === groups=249 | unfinished=243 | pool_remaining=453 | reward=1.3s | old_log_prob=138.6s | ref_log_prob=126.5s | adv=0.2s | update_actor=396.0s | train=665.1s | gen=263.2s | step=928.4s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:   9%|███████▎                                                                             | 5/58 [59:40<10:00:53, 680.25s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:  10%|████████▍                                                                         | 6/58 [1:29:22<15:14:21, 1055.03s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:  12%|██████████                                                                         | 7/58 [1:37:59<12:27:09, 879.00s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:4 - critic/score/mean:0.24447791278362274 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.24447791278362274 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.012103051878511906 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.012103051878511906 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:579.0125732421875 - response_length/max:3072.0 - response_length/min:4.0 - response_length/clip_ratio:0.00200803205370903 - response_length_non_aborted/mean:579.0125732421875 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:4.0 - response_length_non_aborted/clip_ratio:0.00200803205370903 - response/aborted_ratio:0.0 - prompt_length/mean:126.67871856689453 - prompt_length/max:1088.0 - prompt_length/min:52.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:1.3484461978077888 - timing_s/old_log_prob:138.61243417859077 - timing_s/ref_log_prob:126.45751079916954 - timing_s/adv:0.1557595059275627 - timing_s/update_actor:395.9997436180711 - timing_s/train:665.0779993310571 - timing_s/gen:263.15304708480835 - timing_s/step:928.3995404243469 - timing_per_token_ms/gen:0.22815557844100698 - timing_per_token_ms/adv:0.0001108027361644196 - timing_per_token_ms/update_actor:0.28170258278616206 - perf/total_num_tokens:1405737 - perf/time_per_step:928.3995404243469 - perf/throughput:757.0754501652784 - training/global_step:4 - training/epoch:0 - segment_rollout/pipeline_step:7 - segment_rollout/train_groups:249 - segment_rollout/train_samples:1992 - segment_rollout/unfinished_pool_size:243 - segment_rollout/experience_pool_samples:453
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 8 | Seg1: 787/1024 finished (76%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 8 | Continuation: 228/243 finished (eos=225, maxlen=3), 252 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 5: 135 groups (1080 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 5 (pipeline=8) === groups=135 | unfinished=252 | pool_remaining=388 | reward=0.7s | old_log_prob=75.7s | ref_log_prob=68.4s | adv=0.1s | update_actor=214.9s | train=361.1s | gen=131.3s | step=492.5s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:5 - critic/score/mean:0.2611111104488373 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.2611111104488373 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.004401488695293665 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.004401488695293665 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:566.8934936523438 - response_length/max:3072.0 - response_length/min:70.0 - response_length/clip_ratio:0.0027777778450399637 - response_length_non_aborted/mean:566.8934936523438 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:70.0 - response_length_non_aborted/clip_ratio:0.0027777778450399637 - response/aborted_ratio:0.0 - prompt_length/mean:114.73332977294922 - prompt_length/max:615.0 - prompt_length/min:53.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:0.7224785089492798 - timing_s/old_log_prob:75.697699919343 - timing_s/ref_log_prob:68.38635589182377 - timing_s/adv:0.07956749200820923 - timing_s/update_actor:214.87087593227625 - timing_s/train:361.1189705207944 - timing_s/gen:131.31460452079773 - timing_s/step:492.5327639579773 - timing_per_token_ms/gen:0.21448048497055547 - timing_per_token_ms/adv:0.00010808494928148375 - timing_per_token_ms/update_actor:0.291881862065125 - perf/total_num_tokens:736157 - perf/time_per_step:492.5327639579773 - perf/throughput:747.3177967738291 - training/global_step:5 - training/epoch:0 - segment_rollout/pipeline_step:8 - segment_rollout/train_groups:135 - segment_rollout/train_samples:1080 - segment_rollout/unfinished_pool_size:252 - segment_rollout/experience_pool_samples:388
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m test_gen_batch meta info: {'eos_token_id': 151645, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True, 'global_steps': 5}
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m validation generation end
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:5 - val-aux/DigitalLearningGmbH/MATH-lighteval/reward/mean@1:0.3224 - val-core/DigitalLearningGmbH/MATH-lighteval/acc/mean@1:0.3224 - val-aux/num_turns/min:2 - val-aux/num_turns/max:2 - val-aux/num_turns/mean:2.0
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 9 | Seg1: 766/1024 finished (74%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 9 | Continuation: 226/252 finished (eos=221, maxlen=5), 284 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 9: gen only | unfinished=284 | pool_samples=1380 | complete_groups=112 (need 128)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 10 | Seg1: 765/1024 finished (74%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 10 | Continuation: 255/284 finished (eos=253, maxlen=2), 288 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 6: 237 groups (1896 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 6 (pipeline=10) === groups=237 | unfinished=288 | pool_remaining=504 | reward=1.3s | old_log_prob=132.9s | ref_log_prob=120.8s | adv=0.1s | update_actor=383.3s | train=640.9s | gen=270.8s | step=911.8s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:6 - critic/score/mean:0.2626582384109497 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.2626582384109497 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.02142893150448799 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.02142893150448799 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:573.9752197265625 - response_length/max:3072.0 - response_length/min:8.0 - response_length/clip_ratio:0.003691983176395297 - response_length_non_aborted/mean:573.9752197265625 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:8.0 - response_length_non_aborted/clip_ratio:0.003691983176395297 - response/aborted_ratio:0.0 - prompt_length/mean:112.74261474609375 - prompt_length/max:765.0 - prompt_length/min:53.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:1.2743220701813698 - timing_s/old_log_prob:132.92089196294546 - timing_s/ref_log_prob:120.78782869130373 - timing_s/adv:0.13987331092357635 - timing_s/update_actor:383.3294242322445 - timing_s/train:640.8571198508143 - timing_s/gen:270.8072888851166 - timing_s/step:911.8263683319092 - timing_per_token_ms/gen:0.24884497768920077 - timing_per_token_ms/adv:0.00010742817561028493 - timing_per_token_ms/update_actor:0.29441199633510506 - perf/total_num_tokens:1302017 - perf/time_per_step:911.8263683319092 - perf/throughput:713.9610375503308 - training/global_step:6 - training/epoch:0 - segment_rollout/pipeline_step:10 - segment_rollout/train_groups:237 - segment_rollout/train_samples:1896 - segment_rollout/unfinished_pool_size:288 - segment_rollout/experience_pool_samples:504
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 11 | Seg1: 798/1024 finished (77%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 11 | Continuation: 266/288 finished (eos=262, maxlen=4), 248 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 7: 139 groups (1112 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:  14%|███████████▍                                                                       | 8/58 [1:46:15<10:30:58, 757.17s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:  16%|█████████████                                                                       | 9/58 [1:54:20<9:08:55, 672.16s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m Segment Pipeline Training:  17%|██████████████▏                                                                   | 10/58 [2:10:10<10:06:23, 757.99s/it]
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 7 (pipeline=11) === groups=139 | unfinished=248 | pool_remaining=456 | reward=0.8s | old_log_prob=77.9s | ref_log_prob=71.0s | adv=0.1s | update_actor=227.5s | train=378.7s | gen=137.7s | step=516.6s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:7 - critic/score/mean:0.2607913613319397 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.2607913613319397 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.017161712050437927 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.017161712050437927 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:616.3713989257812 - response_length/max:3072.0 - response_length/min:117.0 - response_length/clip_ratio:0.003597122384235263 - response_length_non_aborted/mean:616.3713989257812 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:117.0 - response_length_non_aborted/clip_ratio:0.003597122384235263 - response/aborted_ratio:0.0 - prompt_length/mean:123.98561096191406 - prompt_length/max:590.0 - prompt_length/min:54.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:0.7598002552986145 - timing_s/old_log_prob:77.85882473737001 - timing_s/ref_log_prob:71.04645072668791 - timing_s/adv:0.08514600992202759 - timing_s/update_actor:227.48278636485338 - timing_s/train:378.70403326302767 - timing_s/gen:137.70501446723938 - timing_s/step:516.5596358776093 - timing_per_token_ms/gen:0.20091043174070713 - timing_per_token_ms/adv:0.00010342328271289929 - timing_per_token_ms/update_actor:0.2763137879047433 - perf/total_num_tokens:823277 - perf/time_per_step:516.5596358776093 - perf/throughput:796.8847571697053 - training/global_step:7 - training/epoch:0 - segment_rollout/pipeline_step:11 - segment_rollout/train_groups:139 - segment_rollout/train_samples:1112 - segment_rollout/unfinished_pool_size:248 - segment_rollout/experience_pool_samples:456
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 12 | Seg1: 798/1024 finished (77%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 12 | Continuation: 228/248 finished (eos=224, maxlen=4), 246 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 8: 133 groups (1064 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 8 (pipeline=12) === groups=133 | unfinished=246 | pool_remaining=418 | reward=0.7s | old_log_prob=74.4s | ref_log_prob=67.6s | adv=0.1s | update_actor=218.4s | train=362.5s | gen=133.6s | step=496.3s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:8 - critic/score/mean:0.2678571343421936 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.2678571343421936 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.022625703364610672 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.022625703364610672 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:587.681396484375 - response_length/max:3072.0 - response_length/min:6.0 - response_length/clip_ratio:0.003759398590773344 - response_length_non_aborted/mean:587.681396484375 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:6.0 - response_length_non_aborted/clip_ratio:0.003759398590773344 - response/aborted_ratio:0.0 - prompt_length/mean:109.69172668457031 - prompt_length/max:474.0 - prompt_length/min:54.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:0.700216144323349 - timing_s/old_log_prob:74.37240988761187 - timing_s/ref_log_prob:67.64706441015005 - timing_s/adv:0.09170076996088028 - timing_s/update_actor:218.4098181426525 - timing_s/train:362.5349464341998 - timing_s/gen:133.641282081604 - timing_s/step:496.273250579834 - timing_per_token_ms/gen:0.21372585664896937 - timing_per_token_ms/adv:0.00012358511055974054 - timing_per_token_ms/update_actor:0.29435087114325714 - perf/total_num_tokens:742005 - perf/time_per_step:496.273250579834 - perf/throughput:747.5770647854371 - training/global_step:8 - training/epoch:0 - segment_rollout/pipeline_step:12 - segment_rollout/train_groups:133 - segment_rollout/train_samples:1064 - segment_rollout/unfinished_pool_size:246 - segment_rollout/experience_pool_samples:418
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 13 | Seg1: 795/1024 finished (77%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 13 | Continuation: 229/246 finished (eos=225, maxlen=4), 246 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 9: 129 groups (1032 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 9 (pipeline=13) === groups=129 | unfinished=246 | pool_remaining=410 | reward=0.7s | old_log_prob=72.2s | ref_log_prob=65.4s | adv=0.1s | update_actor=211.3s | train=350.9s | gen=134.2s | step=485.2s
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m step:9 - critic/score/mean:0.26356589794158936 - critic/score/max:1.0 - critic/score/min:0.0 - critic/rewards/mean:0.26356589794158936 - critic/rewards/max:1.0 - critic/rewards/min:0.0 - critic/advantages/mean:-0.013408745639026165 - critic/advantages/max:2.4748666286468506 - critic/advantages/min:-2.4748666286468506 - critic/returns/mean:-0.013408745639026165 - critic/returns/max:2.4748666286468506 - critic/returns/min:-2.4748666286468506 - response_length/mean:596.5552368164062 - response_length/max:3072.0 - response_length/min:112.0 - response_length/clip_ratio:0.0038759689778089523 - response_length_non_aborted/mean:596.5552368164062 - response_length_non_aborted/max:3072.0 - response_length_non_aborted/min:112.0 - response_length_non_aborted/clip_ratio:0.0038759689778089523 - response/aborted_ratio:0.0 - prompt_length/mean:126.57364654541016 - prompt_length/max:935.0 - prompt_length/min:56.0 - prompt_length/clip_ratio:0.0 - timing_s/reward:0.6979316547513008 - timing_s/old_log_prob:72.17730602622032 - timing_s/ref_log_prob:65.36341270059347 - timing_s/adv:0.08609586209058762 - timing_s/update_actor:211.28488502651453 - timing_s/train:350.8985063806176 - timing_s/gen:134.19916653633118 - timing_s/step:485.21419501304626 - timing_per_token_ms/gen:0.2179814122364856 - timing_per_token_ms/adv:0.00011536840213192243 - timing_per_token_ms/update_actor:0.28312161569958627 - perf/total_num_tokens:746269 - perf/time_per_step:485.21419501304626 - perf/throughput:769.0098596352221 - training/global_step:9 - training/epoch:0 - segment_rollout/pipeline_step:13 - segment_rollout/train_groups:129 - segment_rollout/train_samples:1032 - segment_rollout/unfinished_pool_size:246 - segment_rollout/experience_pool_samples:410
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 14 | Seg1: 825/1024 finished (80%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 14 | Continuation: 222/246 finished (eos=221, maxlen=1), 223 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 14: gen only | unfinished=223 | pool_samples=1457 | complete_groups=122 (need 128)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 15 | Seg1: 789/1024 finished (77%)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Step 15 | Continuation: 201/223 finished (eos=196, maxlen=5), 257 still unfinished
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] Training step 10: 251 groups (2008 samples)
+[36m(SegmentRolloutTaskRunner pid=4065519)[0m [SegmentPipeline] === Train Step 10 (pipeline=15) === groups=251 | unfinished=257 | pool_remaining=439 | reward=1.3s | old_log_prob=142.7s | ref_log_prob=127.8s | adv=0.1s | update_actor=412.9s | train=687.4s | gen=262.5s | step=950.1s

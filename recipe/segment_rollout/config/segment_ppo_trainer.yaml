@@ -1,0 +1,5 @@
+# Segment Rollout specific config
+# These values are merged on top of the standard PPO trainer config
+segment_rollout:
+  num_segments: 4          # number of segments to split max_response_length into
+  min_train_groups: 8      # minimum complete GRPO groups before triggering training
