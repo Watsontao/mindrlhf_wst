@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:arxiv.org)",
-      "Bash(awk 'NR>=30950 && NR<=30970' \"F:\\\\Desktop\\\\work\\\\verl0.7.0\\\\async_train_log_20260325_182954.txt\")"
+      "Bash(awk 'NR>=30950 && NR<=30970' \"F:\\\\Desktop\\\\work\\\\verl0.7.0\\\\async_train_log_20260325_182954.txt\")",
+      "Bash(python -c \":*)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''D:/Desktop/work/verl0.7.0/recipe/segment_rollout/segment_trainer.py''\\).read\\(\\)\\); print\\(''OK''\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''D:/Desktop/work/verl0.7.0/recipe/segment_rollout/segment_trainer.py'', encoding=''utf-8''\\).read\\(\\)\\); print\\(''OK''\\)\")"
     ]
   }
 }

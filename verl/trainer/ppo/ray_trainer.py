@@ -605,6 +605,9 @@ class RayPPOTrainer:
         return gen_batch
 
     def _validate(self):
+        print(f"[_validate] ENTER: val_dataloader={self.val_dataloader}, "
+              f"val_reward_fn={self.val_reward_fn is not None}, "
+              f"async_rollout_mode={getattr(self, 'async_rollout_mode', None)}")
         data_source_lst = []
         reward_extra_infos_dict: dict[str, list] = defaultdict(list)
 
@@ -616,8 +619,11 @@ class RayPPOTrainer:
         sample_turns = []
         sample_uids = []
 
+        print(f"[_validate] Starting iteration over val_dataloader (len={len(self.val_dataloader) if hasattr(self.val_dataloader, '__len__') else 'unknown'})")
         for test_data in self.val_dataloader:
+            print(f"[_validate] Got batch from val_dataloader, keys={list(test_data.keys()) if hasattr(test_data, 'keys') else type(test_data)}")
             test_batch = DataProto.from_single_dict(test_data)
+            print(f"[_validate] test_batch size={len(test_batch)}")
 
             if "uid" not in test_batch.non_tensor_batch:
                 test_batch.non_tensor_batch["uid"] = np.array(
@@ -625,12 +631,16 @@ class RayPPOTrainer:
                 )
 
             # repeat test batch
+            print(f"[_validate] repeat_times={self.config.actor_rollout_ref.rollout.val_kwargs.n}")
             test_batch = test_batch.repeat(
                 repeat_times=self.config.actor_rollout_ref.rollout.val_kwargs.n, interleave=True
             )
+            print(f"[_validate] after repeat: test_batch size={len(test_batch)}")
 
             # we only do validation on rule-based rm
+            print(f"[_validate] reward_model.enable={self.config.reward_model.enable}")
             if self.config.reward_model.enable and test_batch[0].non_tensor_batch["reward_model"]["style"] == "model":
+                print(f"[_validate] reward_model style=model, returning early with {{}}")
                 return {}
 
             ground_truths = [
@@ -639,6 +649,7 @@ class RayPPOTrainer:
             sample_gts.extend(ground_truths)
 
             test_gen_batch = self._get_gen_batch(test_batch)
+            print(f"[_validate] _get_gen_batch done, size={len(test_gen_batch)}")
             test_gen_batch.meta_info = {
                 "eos_token_id": self.tokenizer.eos_token_id,
                 "pad_token_id": self.tokenizer.pad_token_id,
@@ -656,10 +667,13 @@ class RayPPOTrainer:
                 else self.config.actor_rollout_ref.rollout.agent.num_workers
             )
             test_gen_batch_padded, pad_size = pad_dataproto_to_divisor(test_gen_batch, size_divisor)
+            print(f"[_validate] Calling generate_sequences, padded_size={len(test_gen_batch_padded)}, "
+                  f"size_divisor={size_divisor}, async_mode={self.async_rollout_mode}")
             if not self.async_rollout_mode:
                 test_output_gen_batch_padded = self.actor_rollout_wg.generate_sequences(test_gen_batch_padded)
             else:
                 test_output_gen_batch_padded = self.async_rollout_manager.generate_sequences(test_gen_batch_padded)
+            print(f"[_validate] generate_sequences returned, output_size={len(test_output_gen_batch_padded)}")
 
             # unpad
             test_output_gen_batch = unpad_dataproto(test_output_gen_batch_padded, pad_size=pad_size)
@@ -703,6 +717,7 @@ class RayPPOTrainer:
 
             data_source_lst.append(test_batch.non_tensor_batch.get("data_source", ["unknown"] * reward_tensor.shape[0]))
 
+        print(f"[_validate] Loop done: data_source_lst len={len(data_source_lst)}, sample_scores len={len(sample_scores)}")
         self._maybe_log_val_generations(inputs=sample_inputs, outputs=sample_outputs, scores=sample_scores)
 
         # dump generations

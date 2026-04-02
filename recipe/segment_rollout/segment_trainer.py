@@ -39,6 +39,36 @@ from verl.utils.debug import marked_timer
 class SegmentRolloutTrainer(RayPPOTrainer):
     """UloRL cross-step pipeline trainer with segment-based rollout."""
 
+    # ───────────────────────── length distribution helpers ─────────────────────────
+
+    @staticmethod
+    def _length_distribution_metrics(lengths, prefix):
+        """Compute length distribution metrics for a list of response lengths.
+
+        Returns a dict of metrics suitable for tensorboard logging.
+        """
+        n = len(lengths)
+        if n == 0:
+            return {}
+        s = sorted(lengths)
+        mean = sum(lengths) / n
+        var = sum((x - mean) ** 2 for x in lengths) / n
+        std = var ** 0.5
+        return {
+            f"{prefix}/mean": mean,
+            f"{prefix}/std": std,
+            f"{prefix}/min": s[0],
+            f"{prefix}/max": s[-1],
+            f"{prefix}/median": s[n // 2],
+            f"{prefix}/p10": s[int(n * 0.10)],
+            f"{prefix}/p25": s[int(n * 0.25)],
+            f"{prefix}/p75": s[int(n * 0.75)],
+            f"{prefix}/p90": s[int(n * 0.90)],
+            f"{prefix}/p95": s[int(n * 0.95)],
+            f"{prefix}/cv": std / mean if mean > 0 else 0,
+            f"{prefix}/max_over_median": s[-1] / s[n // 2] if s[n // 2] > 0 else 0,
+        }
+
     # ───────────────────────── config ─────────────────────────
 
     def _get_segment_config(self):
@@ -64,6 +94,69 @@ class SegmentRolloutTrainer(RayPPOTrainer):
             "top_p": config.top_p,
             "repetition_penalty": 1.0,
         }
+
+    # ───────────────────────── response logging ─────────────────────────
+
+    def _log_rollout_responses(self, train_batch, folder_suffix="segment"):
+        """Log rollout response lengths and decoded texts to jsonl files.
+
+        Mirrors the logging logic in RayPPOTrainer, writing to:
+            ~/work/verl_070/Rollout_response/<folder_suffix>/
+        """
+        import json
+        import os
+        import re
+        import time
+
+        try:
+            n = self.config.actor_rollout_ref.rollout.n
+
+            response_mask = train_batch.batch.get("response_mask", None)
+            if response_mask is None:
+                return
+            if hasattr(response_mask, "cpu"):
+                response_mask = response_mask.cpu()
+            lengths = response_mask.sum(dim=-1).tolist()
+
+            responses_tensor = train_batch.batch["responses"]
+            if hasattr(responses_tensor, "cpu"):
+                responses_tensor = responses_tensor.cpu()
+            decoded_texts = self.tokenizer.batch_decode(responses_tensor, skip_special_tokens=True)
+
+            model_path = self.config.actor_rollout_ref.model.path
+            model_match = re.search(r"(\d+(?:\.\d+)?b)", model_path.lower())
+            model_suffix = model_match.group(1) if model_match else "model"
+
+            experiment_name = self.config.trainer.get("experiment_name", "default")
+            project_name = self.config.trainer.get("project_name", "default")
+            output_dir = os.path.join(
+                os.path.expanduser("~"), "work", "verl", "Rollout_response", project_name ,experiment_name, folder_suffix
+            )
+            os.makedirs(output_dir, exist_ok=True)
+
+            timestamp = time.time()
+            len_file = os.path.join(output_dir, f"rollout_length_stats_{folder_suffix}_{model_suffix}.jsonl")
+            txt_file = os.path.join(output_dir, f"rollout_responses_{folder_suffix}_{model_suffix}.jsonl")
+
+            with open(len_file, "a", encoding="utf-8") as f_len, \
+                 open(txt_file, "a", encoding="utf-8") as f_txt:
+                for i in range(0, len(lengths), n):
+                    prompt_lengths = lengths[i:i + n]
+                    prompt_texts = decoded_texts[i:i + n]
+
+                    f_len.write(json.dumps({
+                        "timestamp": timestamp,
+                        "global_steps": self.global_steps,
+                        "n_responses": len(prompt_lengths),
+                        "lengths": prompt_lengths,
+                    }, ensure_ascii=False) + "\n")
+
+                    f_txt.write(json.dumps({
+                        "global_steps": self.global_steps,
+                        "responses": prompt_texts,
+                    }, ensure_ascii=False) + "\n")
+        except Exception as e:
+            print(f"[SegmentRolloutTrainer] Failed to log rollout responses: {e}")
 
     # ───────────────────────── training ─────────────────────────
 
@@ -163,7 +256,7 @@ class SegmentRolloutTrainer(RayPPOTrainer):
                                unfinished_pool, experience_pool):
         """Process segment 1 output: extract tokens, route to pools.
 
-        Returns number of finished samples.
+        Returns (finished_count, seg1_lengths_list).
         """
         total_samples = batch_info["total_samples"]
         batch_repeated = batch_info["batch_repeated"]
@@ -171,6 +264,7 @@ class SegmentRolloutTrainer(RayPPOTrainer):
 
         prompt_length = seg1_output.batch["prompts"].shape[1]
         seg1_finished = 0
+        seg1_lengths = []
 
         for i in range(total_samples):
             # Extract unpadded prompt ids (left-padded → strip leading pads)
@@ -182,6 +276,7 @@ class SegmentRolloutTrainer(RayPPOTrainer):
             attn_resp = seg1_output.batch["attention_mask"][i][prompt_length:]
             actual_len = int(attn_resp.sum().item())
             accumulated_ids = seg1_output.batch["responses"][i][:actual_len].tolist()
+            seg1_lengths.append(actual_len)
 
             finished = actual_len < seg_len
             if finished:
@@ -207,17 +302,19 @@ class SegmentRolloutTrainer(RayPPOTrainer):
             else:
                 unfinished_pool[uid] = state
 
-        return seg1_finished
+        return seg1_finished, seg1_lengths
 
     def _process_continuation_results(self, cont_futures, seg_len, max_response_length,
                                        num_segments, unfinished_pool, experience_pool):
         """Process continuation results: update tokens, move finished to experience pool.
 
-        Returns (newly_finished_count, eos_count, maxlen_count).
+        Returns (newly_finished_count, eos_count, maxlen_count, cont_new_token_lengths, cont_accumulated_lengths).
         """
         newly_finished = []
         new_eos = 0
         new_max = 0
+        cont_new_token_lengths = []   # this segment's new tokens per sample
+        cont_accumulated_lengths = [] # total accumulated length per sample after this segment
 
         for uid, future in cont_futures.items():
             output = ray.get(future)
@@ -225,6 +322,8 @@ class SegmentRolloutTrainer(RayPPOTrainer):
             state = unfinished_pool[uid]
             state["accumulated_ids"].extend(new_tokens)
             state["seg_count"] += 1
+            cont_new_token_lengths.append(len(new_tokens))
+            cont_accumulated_lengths.append(len(state["accumulated_ids"]))
 
             hit_eos = len(new_tokens) < seg_len
             hit_max = len(state["accumulated_ids"]) >= max_response_length
@@ -243,7 +342,7 @@ class SegmentRolloutTrainer(RayPPOTrainer):
         for uid in newly_finished:
             del unfinished_pool[uid]
 
-        return len(newly_finished), new_eos, new_max
+        return len(newly_finished), new_eos, new_max, cont_new_token_lengths, cont_accumulated_lengths
 
     def _assemble_training_batch_from_pool(self, complete_puids, experience_pool, n,
                                             prompt_length, response_length, pad_token_id):
@@ -464,11 +563,12 @@ class SegmentRolloutTrainer(RayPPOTrainer):
                 # ── Collect seg1 results ──
                 seg1_finished = 0
                 seg1_total = 0
+                seg1_lengths = []
                 if seg1_futures:
                     seg1_outputs = ray.get(seg1_futures)
                     seg1_output = DataProto.concat(seg1_outputs)
                     seg1_total = new_batch_info["total_samples"]
-                    seg1_finished = self._process_seg1_results(
+                    seg1_finished, seg1_lengths = self._process_seg1_results(
                         seg1_output, new_batch_info, seg_len, n,
                         unfinished_pool, experience_pool,
                     )
@@ -479,19 +579,58 @@ class SegmentRolloutTrainer(RayPPOTrainer):
                 # ── Collect continuation results ──
                 cont_total = 0
                 cont_finished = 0
+                cont_new_token_lengths = []
+                cont_accumulated_lengths = []
                 if cont_futures:
                     cont_total = len(cont_futures)
-                    cont_finished, eos_count, max_count = self._process_continuation_results(
-                        cont_futures, seg_len, max_response_length, num_segments,
-                        unfinished_pool, experience_pool,
-                    )
+                    cont_finished, eos_count, max_count, cont_new_token_lengths, cont_accumulated_lengths = \
+                        self._process_continuation_results(
+                            cont_futures, seg_len, max_response_length, num_segments,
+                            unfinished_pool, experience_pool,
+                        )
                     print(f"[SegmentPipeline] Step {pipeline_step} | Continuation: "
                           f"{cont_finished}/{cont_total} finished "
                           f"(eos={eos_count}, maxlen={max_count}), "
                           f"{len(unfinished_pool)} still unfinished")
 
                 self.async_rollout_manager.sleep()
-                gen_time_accum += time.time() - gen_start
+                gen_elapsed = time.time() - gen_start
+                gen_time_accum += gen_elapsed
+
+                # ── Per-pipeline-step length distribution metrics ──
+                step_metrics = {
+                    "pipe/step": pipeline_step,
+                    "pipe/n_active": seg1_total + cont_total,
+                    "pipe/gen_time": gen_elapsed,
+                    "pipe/seg1_total": seg1_total,
+                    "pipe/seg1_finished": seg1_finished,
+                    "pipe/seg1_finish_rate": seg1_finished / seg1_total if seg1_total > 0 else 0,
+                    "pipe/cont_total": cont_total,
+                    "pipe/cont_finished": cont_finished,
+                    "pipe/cont_finish_rate": cont_finished / cont_total if cont_total > 0 else 0,
+                    "pipe/unfinished_pool_size": len(unfinished_pool),
+                }
+                # Seg1 length distribution
+                step_metrics.update(self._length_distribution_metrics(seg1_lengths, "pipe_seg1_len"))
+                # Continuation: new tokens this segment
+                step_metrics.update(self._length_distribution_metrics(cont_new_token_lengths, "pipe_cont_new_len"))
+                # Continuation: total accumulated length
+                step_metrics.update(self._length_distribution_metrics(cont_accumulated_lengths, "pipe_cont_accum_len"))
+                # Unfinished pool accumulated lengths — shows remaining work distribution
+                unfinished_accum = [len(s["accumulated_ids"]) for s in unfinished_pool.values()]
+                step_metrics.update(self._length_distribution_metrics(unfinished_accum, "pipe_unfinished_accum"))
+                # Throughput: tokens per second this step
+                all_new_tokens = seg1_lengths + cont_new_token_lengths
+                total_new_tokens = sum(all_new_tokens)
+                step_metrics["pipe/tokens_generated"] = total_new_tokens
+                step_metrics["pipe/tokens_per_sec"] = total_new_tokens / gen_elapsed if gen_elapsed > 0 else 0
+                # Hypothetical dynamic seg_len (for comparison, not applied)
+                n_active = seg1_total + cont_total
+                if n_active > 0:
+                    hypothetical_L = max(64, min(4096, max_response_length * 8 // n_active))
+                    step_metrics["pipe/hypothetical_dynamic_seg_len"] = hypothetical_L
+                    step_metrics["pipe/fixed_seg_len"] = seg_len
+                logger.log(data=step_metrics, step=pipeline_step)
 
             # ═══════════════════════════════════════════════════════
             # Phase 3: Train if enough complete GRPO groups
@@ -519,6 +658,7 @@ class SegmentRolloutTrainer(RayPPOTrainer):
                         complete_puids, experience_pool, n,
                         prompt_length, max_response_length, pad_token_id,
                     )
+                    self._log_rollout_responses(train_batch, folder_suffix="segment")
                     # Remove trained groups from pool BEFORE training
                     # (so pool reflects post-train state in logs)
                     for puid in complete_puids:
@@ -550,6 +690,32 @@ class SegmentRolloutTrainer(RayPPOTrainer):
                       f"unfinished={len(unfinished_pool)} | "
                       f"pool_remaining={pool_remaining} | "
                       f"{timing_str}")
+
+                # Final response lengths of trained samples
+                train_response_mask = trained_batch.batch.get("response_mask", None)
+                if train_response_mask is not None:
+                    if hasattr(train_response_mask, 'cpu'):
+                        train_response_mask = train_response_mask.cpu()
+                    train_lengths = train_response_mask.sum(dim=-1).tolist()
+                    metrics.update(self._length_distribution_metrics(train_lengths, "train_resp_len"))
+                    # Segment efficiency: how many segments did samples actually need
+                    # (approx: ceil(length / seg_len), vs fixed num_segments)
+                    actual_segs = [min(num_segments, max(1, (l + seg_len - 1) // seg_len)) for l in train_lengths]
+                    metrics["train_resp_len/avg_segments_used"] = sum(actual_segs) / len(actual_segs)
+                    metrics["train_resp_len/pct_1seg"] = sum(1 for s in actual_segs if s == 1) / len(actual_segs)
+                    metrics["train_resp_len/pct_max_seg"] = sum(1 for s in actual_segs if s == num_segments) / len(actual_segs)
+                    # GRPO group internal variance (same prompt N responses, how different are they)
+                    grpo_length_cvs = []
+                    for gi in range(0, len(train_lengths), n):
+                        group = train_lengths[gi:gi+n]
+                        if len(group) >= 2:
+                            g_mean = sum(group) / len(group)
+                            if g_mean > 0:
+                                g_std = (sum((x - g_mean) ** 2 for x in group) / len(group)) ** 0.5
+                                grpo_length_cvs.append(g_std / g_mean)
+                    if grpo_length_cvs:
+                        metrics["train_resp_len/grpo_cv_mean"] = sum(grpo_length_cvs) / len(grpo_length_cvs)
+                        metrics["train_resp_len/grpo_cv_max"] = max(grpo_length_cvs)
 
                 metrics.update({
                     "training/global_step": self.global_steps,

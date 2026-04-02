@@ -1,0 +1,18 @@
+# Dynamic Segment Rollout: Budget-Constrained Dual-Channel config
+#
+# Budget allocation per step:
+#   1. cont_budget = min(N_cont × l_max, capacity × cont_ratio)
+#   2. seg1_budget = capacity - cont_budget
+#   3. cont_len   = clamp(cont_budget / N_cont, l_min, l_max)
+#   4. seg1_len   = clamp(seg1_budget / N_inject, seg1_min_len, l_max)
+#   5. actual_inject = min(N_new, seg1_budget // seg1_min_len)  -- throttle to guarantee useful seg1_len
+#
+# Continuation-priority: unfinished samples get budget first.
+# seg1_min_len guarantees new samples get enough tokens for a reasonable finish rate.
+dynamic_segment_rollout:
+  total_token_capacity: 393216  # token budget per pipeline step (e.g., 128 * 3072)
+  l_min: 64                     # minimum segment length for continuation
+  l_max: 3072                   # maximum segment length (ceiling, usually = max_response_length)
+  cont_ratio: 0.7               # max fraction of budget allocated to continuation
+  seg1_min_len: 768             # minimum useful seg1 length (throttle injection to guarantee this)
+  min_train_groups: 8           # minimum complete GRPO groups before triggering training

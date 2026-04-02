@@ -281,12 +281,7 @@ class FullyAsyncRollouter(FullyAsyncRayPPOTrainer):
         return self.total_train_steps
 
     async def update_param_version(self, version: int, validate: bool = False, global_steps: int = 0):
-        """Update current parameter version.
-
-        NOTE: This method must return quickly so that resume() (which depends on
-        this method's ObjectRef) can fire promptly. Validation is spawned as a
-        background asyncio task to avoid blocking the return.
-        """
+        """Update current parameter version"""
         async with self.lock:
             old_version = self.current_param_version
             self.current_param_version = version
@@ -310,49 +305,21 @@ class FullyAsyncRollouter(FullyAsyncRayPPOTrainer):
                 f",reset staleness_samples to: {self.staleness_samples}"
                 f",idle_ratio: {idle_ratio}"
             )
-            self.version_start_time = time.time()
-
-        # Validation runs OUTSIDE the lock and as a background task,
-        # so it does NOT block this method from returning.
-        # This is critical: resume.remote() depends on this method's ObjectRef,
-        # if we block here, resume never fires → deadlock.
-        need_validate = (
-            self.val_reward_fn is not None
-            and self.config.rollout.test_freq > 0
-            and version % self.config.rollout.test_freq == 0
-            and version > 0
-        ) or (validate and self.val_reward_fn is not None)
-
-        if need_validate:
-            asyncio.create_task(self._run_validation_background(timing_raw, global_steps, version))
-        else:
-            data = ValidateMetrics(
-                timing_raw=timing_raw, metrics=None, global_steps=global_steps, param_version=version
-            )
-            await self.message_queue_client.put_validate(ray.cloudpickle.dumps(data))
-
-    async def _run_validation_background(self, timing_raw: dict, global_steps: int, version: int):
-        """Run validation in background so it doesn't block resume()."""
-        try:
-            print(f"[FullyAsyncRollouter][Validate] Starting validation for version {version}...")
-            loop = asyncio.get_event_loop()
-            val_metrics = await loop.run_in_executor(None, self._validate)
-            print(f"[FullyAsyncRollouter][Validate] Validation done for version {version}")
-            with marked_timer("rollouter/validate_time", timing_raw, color="green"):
-                pass  # timing already captured by run_in_executor wall time
+            val_metrics = None
+            if (
+                self.val_reward_fn is not None
+                and self.config.rollout.test_freq > 0
+                and self.current_param_version % self.config.rollout.test_freq == 0
+                and self.current_param_version > 0
+            ) or (validate and self.val_reward_fn is not None):
+                with marked_timer("rollouter/validate_time", timing_raw, color="green"):
+                    val_metrics: dict = self._validate()
             data = ValidateMetrics(
                 timing_raw=timing_raw, metrics=val_metrics, global_steps=global_steps, param_version=version
             )
             await self.message_queue_client.put_validate(ray.cloudpickle.dumps(data))
-        except Exception as e:
-            import traceback
-            print(f"[FullyAsyncRollouter][Validate] Error during validation: {e}")
-            print(traceback.format_exc())
-            # Still send metrics even on error so trainer doesn't hang
-            data = ValidateMetrics(
-                timing_raw=timing_raw, metrics=None, global_steps=global_steps, param_version=version
-            )
-            await self.message_queue_client.put_validate(ray.cloudpickle.dumps(data))
+
+            self.version_start_time = time.time()
 
     async def save_checkpoint(self, local_global_step_folder: str):
         # WARNING!: Due to the asynchronous nature, there are some in-flight samples
